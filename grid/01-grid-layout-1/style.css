@@ -8,6 +8,16 @@ body, html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display:grid;
+  grid-template-areas:"hd" "nav" "art" "sd" "ft";
+  grid-gap: 10px;
+}
+
+@media (min-width:600px){
+  .container{
+    grid-template-columns:1fr 3fr;
+    grid-template-areas:"hd hd hd hd" "sd nav nav nav" "sd art art art" "ft ft ft ft";
+  }
 }
 
 .container div {
@@ -20,19 +30,19 @@ body, html {
 }
 
 .header {
-  background-color: #FFDE22;
+  background-color: #FFDE22;grid-area:hd;
 }
 
 .sidebar {
-  background-color: #FF7755;
+  background-color: #FF7755;grid-area:sd;
 }
 
 .nav {
-  background-color: #00DDFF;
+  background-color: #00DDFF;grid-area:nav;
 }
 
 .article {
-  background-color: #bccbde;
+  background-color: #bccbde;grid-area:art;
 }
 
 .article p {
@@ -43,5 +53,5 @@ body, html {
 }
 
 .footer {
-  background-color: #393f4d;
+  background-color: #393f4d;grid-area:ft;
 }
